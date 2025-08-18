@@ -1,0 +1,10 @@
+CREATE DATABASE takenote;
+\c takenote;
+
+CREATE TABLE note (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    content TEXT
+);
